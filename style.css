@@ -1,0 +1,638 @@
+body{
+    font-family:'Poppins', sans-serif;
+    
+}
+html {
+  scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@keyframes loadend{
+    
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+@keyframes anifornav{
+    from{
+        transform:translateY(-80%);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+@keyframes anifornav2{
+    from{
+        transform:translateY(0);
+    }
+    to{
+        transform: translateY(-80%);
+    }
+}
+.hidden{
+    animation: loadend 3s;
+    animation-fill-mode: forwards;
+}
+.loader{
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.loader img{
+    width: 100px;
+    
+}
+.content{
+    overflow: hidden;
+    width: 100%;
+}
+.header{
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #000;
+    color: #fff;
+    transition: optr 1s;
+    position: fixed;
+    box-shadow: 2px 0 20px #990011FF;
+    
+    
+}
+.header span{
+    float: left;
+    font-size: 20px;
+    color: #F2AA4CFF;
+    padding-top: 10px;
+   
+    
+}
+.responbut{
+    
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 6;
+    display: none;
+    
+}
+.responbut ion-icon{
+    font-size: 30px;
+    color: white;
+}
+
+.header .navbar{
+     display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+.header nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 30px;
+}
+.header nav ul{
+    display:flex;
+    flex-direction: column;
+   
+}
+.header nav ul li .firsts{
+    color:#990011FF;
+}
+.header nav ul li a{
+    text-decoration: none;
+    color: black;
+    transition: all .3s ease-in-out;
+    color: #fff;
+}
+.header nav ul li a:hover{
+    padding: 50px;
+    color: #990011FF;
+}
+.container{
+    width: 100%;
+    height:100%;
+    display: flex;
+    justify-content: center; 
+    scroll-snap-type: mandatory;
+    overflow-y: scroll;
+}
+.but{
+    width: 50px;
+    height: 50px;
+    background: #8860d0;
+    position: fixed;
+    top: 90%;
+    left: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 9;
+    border-radius: 25%;
+    
+}
+.but ion-icon{
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+.butst{
+    opacity: 0;
+}
+.home{
+    width: 80%;
+    height:100vh;
+    display: flex;
+    align-items:flex-end;
+    justify-content:center;
+    border-bottom: 1px solid #D3D3C7;
+    flex-direction: column;
+    
+    background-color: #f4f4f4;
+    background-image: url(back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #444444;
+    scroll-snap-align:start;
+    transition: optr 1s;
+    float: right;
+    
+}
+.home .homeall{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    float: right;
+    width: 75%;
+    font-size: 20px;
+    font-weight: 500;
+    
+}
+.home .homecon{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: #000;
+}
+
+;
+
+.home .homeall .homecon p{
+    font-size: 50px;
+    color: red;
+}
+.home .homecon a{
+    text-decoration: none;
+    color:#fff;
+    background:#990011FF;
+    width:100%;
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    margin-top:20px; 
+    display: flex;
+    justify-content: center;
+    
+}
+
+.home ul{
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+.home li{
+    list-style: none;
+    display: inline-block;
+}
+.home li a{
+    text-decoration: none;
+}
+.home li a ion-icon{
+    font-size: 40px;
+    color:#990011FF;
+    font-weight:900;
+}
+
+.home img{
+    width:300px;
+    height: 300px;
+    border-radius: 25px 25px 50% 50%;
+    margin-left: 100px;
+    
+}
+.about{
+    
+    border-bottom: 1px solid #D3D3C7;
+    height: 100vh;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+     scroll-snap-align:start;
+    transition: optr 1s;
+    background-color:  #f4f4f4;
+    float: right;
+        
+}
+.aboutcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.aboutcon .aboutall h3{
+    color:#990011FF;
+    border-bottom: 1px solid #990011FF;
+}
+.aboutcon p{
+    font-size: 20px;
+    font-weight: 500;
+    width: 300px;
+}
+.aboutcon img{
+    width: 300px;
+    height: 300px;
+   border-radius: 50px;
+        box-shadow: 5px 5px 20px #000;
+
+}
+.aboutcon .aboutall{
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    color: #000; 
+}
+.about h4{
+    width: 100%;
+    text-align: center;
+    font-size: 100px;
+    color:#990011FF ;
+}
+.ab{
+    width:30%;
+    height: 7vh;
+    background-color: #8860d0;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    transition: border .25s ease-in-out;
+    cursor: pointer;
+    
+}
+.ab:hover{
+    border: solid 2px white;
+}
+.ab p{
+    color: white;
+    font-size: 20px;
+}
+
+.skills{
+   
+    border-bottom: 1px solid #D3D3C7;
+    height: 100vh;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+     scroll-snap-align:start;
+    transition: optr 1s;
+    background-color:  #f4f4f4;
+    float: right;
+}
+.skills .boxes{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    
+}
+.skills .boxes .box{
+    background-color: #EAEAE9;
+    width: 170px;
+    height: 170px;
+    color: #5A5B58;
+    margin-left: 70px;
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    font-weight: 500;
+    box-shadow: 1px 1px 3px #000;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+   
+    
+}
+.skills .boxes .box:hover{
+    transform: scale(1.07); 
+}
+
+.skills .boxes .box .firstletter{
+    color:#990011FF ;
+    font-size: 45PX;
+    font-weight: 600;
+}
+
+.skills h4{
+    width: 100%;
+    display:block;
+    text-align: center;
+    font-size: 100px;
+    color:#990011FF;
+}
+
+.circle1{
+    background-color: #990011FF;
+    clip-path: circle(50.0% at 90% 0);
+    width: 50%;
+    height: 50vh;
+    position: absolute;
+    left: 50%;
+    
+
+}
+.circle2{
+    background-color: #990011FF;
+     width: 50%;
+    height: 50vh;
+    clip-path: circle(50% at 0 0);
+    position: absolute;
+
+    
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    float: right;
+    background-color:#f4f4f4 ;
+    width: 80%;
+    height: 100vh;
+    transition: optr 1s;
+}
+.contact h4{
+    font-size: 100px;
+    display: block;
+    color: #990011FF;
+}
+.contactcon{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column-reverse;
+    height: 50vh;
+    
+    
+}
+.contactcon ul{
+    
+    display: flex;
+    flex-direction: row;
+    background: #990011FF;
+    padding: 20px;
+    width: 100%;
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.contactcon ul li{
+    list-style: none;
+    margin-left: 30px;
+    
+}
+.contactcon ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+}
+.contactcon input{
+    width: 300px;
+    height: 50px;
+    margin-left: 30px;
+    margin-bottom: 100px;
+    text-align: left;
+    background: transparent; 
+    color: #000;
+    border: none;
+    border-bottom: 2px solid #000;
+    outline: none;
+}
+::-webkit-input-placeholder{
+    color: #000;    
+    opacity: 1;
+}
+::-moz-input-placeholder{
+    color: #000;    
+    opacity: 1;
+}
+::-ms-input-placeholder{
+    color: #000;    
+    opacity: 1;
+}
+
+
+/*.contactcon form .inptxt{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}*/
+.contactcon input[type="submit"]{
+    width: 150px;
+    background-color:#990011FF ;
+    text-align: center;
+    color: #fff;
+    border-radius: 25px;
+    border: none;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    
+}
+
+@media (max-width: 750px){
+    ion-icon{
+        z-index: 50;
+    }
+    .loader{
+        width:100%;
+    }
+   
+    .header{
+        height: 60px;
+        width: 100%;
+        box-shadow: 0 0 0;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        z-index: 99;
+        
+    }
+    .header .empty{
+        display: none;
+    }
+    .header .responbut{
+        display: inline-block;
+        top: 1rem;
+        left: 1rem;
+        width: 30px;
+        height: 30px;
+        z-index: 99;
+    }
+    .header img{
+        display:none;
+    }
+    .header .navbar{
+        width: 100%;
+        display: none;
+    }
+    .active{
+        width: 100%; 
+        z-index: 99; 
+        animation: anifornav 1s;
+    }
+    .header nav ul{
+        margin-top: 60px;
+        width: 100%;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        z-index: 99;
+    }
+    
+    .header nav ul li{
+        display: inline-block;
+        margin-left: 0;
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        z-index: 99;
+    }
+    .header .navbar ul li a{
+    }
+    .home{
+        width:100%;
+        
+    }
+    .home .homeall{
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        justify-content: space-around;
+        
+    }
+    .home .homeall ul{
+        flex-direction: row;
+    }
+    .home .homeall .homecon{
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .home .homeall .homecon a{
+        width: 75%;
+    }
+    .about{
+        width: 100%;
+        height:120vh;
+    }
+    .about h4{
+        font-size: 50px;
+    }
+    .about .aboutcon{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 80vh;
+    }
+    .about .aboutcon .aboutall{
+        margin-left: 0;
+    }
+    .skills{
+        width:100%;
+        height: 120vh;
+    }
+    .skills .boxes{
+        width: 100%;
+    }
+    .skills .boxes .box{
+        width: 150px;
+        height: 150px;
+        margin-left: 30px;
+        margin-top: 30px;
+        font-size: 30px;
+        
+    }
+    .contact{
+        width:100%;
+        height: 100vh;
+    }
+    .contact h4{
+    font-size: 50px;
+    display: block;
+    color: #990011FF;
+}
+    .contactcon input{
+    width: 80%;
+    height: 50px;
+    margin-left: 0;
+    margin-bottom: 30px;
+    text-align: left;
+    background: transparent; 
+    color: #000;
+    border: none;
+    border-bottom: 2px solid #000;
+    outline: none;
+}
+
+}
+@media (min-height: 50px) and (max-height:600px){
+    .home{
+        height: 150vh;
+    }
+    .about{
+        height:200vh;
+    }
+    .skills{
+        height: 200%;
+    }
+    .contact{
+        height: 250vh;
+    }
+   
+    }
